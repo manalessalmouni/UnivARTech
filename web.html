@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnivARTech 2025</title>
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+      /* General Styles */
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: #fffbfe; /* Changed to white */
+        color: #333;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+  
+      .navbar {
+        background: #1d1b6c;
+        padding: 15px 0;
+      }
+  
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #fff;
+      }
+  
+      .navbar-nav .nav-link {
+        color: #fff;
+        transition: color 0.3s ease;
+      }
+  
+      .navbar-nav .nav-link:hover {
+        color: #ff007f;
+      }
+  
+      .hero {
+        padding: 120px 20px;
+        background: url('https://source.unsplash.com/1600x900/?technology,art') no-repeat center/cover;
+        position: relative;
+        color: #1d1b6c;
+        text-align: center;
+        animation: fadeIn 2s ease-in-out;
+      }
+  
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        animation: slideUp 2s ease-out;
+      }
+  
+      .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        animation: fadeInText 2s ease-in-out;
+      }
+  
+      .hero .btn {
+        background-color: #ffeb3b;
+        color: #333;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+      }
+  
+      .hero .btn:hover {
+        background-color: #ff007f;
+        color: #fff;
+      }
+  
+      .section-title {
+        text-align: center;
+        margin: 60px 0;
+        font-size: 2.5rem;
+        color: #ff007f;
+        font-weight: 600;
+        animation: fadeIn 2s ease-out;
+      }
+  
+      .content-box {
+        background: rgba(0, 0, 0, 0.05);
+        padding: 30px;
+        border-radius: 15px;
+        margin: 20px auto;
+        max-width: 800px;
+        text-align: left;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+  
+      .content-box:hover {
+        transform: translateY(-10px);
+      }
+  
+      .features {
+        text-align: center;
+        padding: 60px 20px;
+      }
+  
+      .features .feature-box {
+        background: rgba(0, 0, 0, 0.05);
+        padding: 20px;
+        border-radius: 15px;
+        margin: 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+  
+      .features .feature-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+      }
+  
+      .features .feature-box i {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #ff00ff;
+      }
+  
+      .footer {
+        text-align: center;
+        padding: 40px 0;
+        background: #1d1b6c;
+        color: #fff;
+        font-size: 0.9rem;
+        box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+      }
+  
+      .footer a {
+        color: #ff007f;
+        text-decoration: none;
+        font-weight: 600;
+      }
+  
+      .footer a:hover {
+        color: #fff;
+      }
+  
+      /* Social Link Styling */
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 8px 15px;
+        margin: 5px;
+        border-radius: 8px;
+        background-color: #ff007f; /* Background color for phone link */
+        transition: all 0.3s ease;
+      }
+  
+      .social-link i {
+        margin-right: 8px;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+      }
+  
+      .social-link:hover {
+        color: #fff;
+        background-color: #f50057;
+      }
+  
+      .social-link:hover i {
+        transform: scale(1.2);
+      }
+  
+      .map-container iframe {
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+  
+      .map-container iframe:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">UnivARTech</a>
+    <div class="navbar-logos">
+      <img src="fsk.png" alt="FSK Logo" style="height: 50px; margin-right: 10px;">
+      <img src="fllk.png" alt="FLLK Logo" style="height: 80px;">
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#call-for-submissions">Submissions</a></li>
+        <li class="nav-item"><a class="nav-link" href="#organization">Organization</a></li>
+        <li class="nav-item"><a class="nav-link" href="#venue">Venue</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>Art in Motion, Gaming in Action</h1>
+    <p>Join us for a celebration of creativity and innovation at UnivARTech 2025.</p>
+    <a href="#about" class="btn">Learn More</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2 class="section-title">What is UnivArTech?</h2>
+    <div class="content-box">
+      <h3>Welcome to UnivArTech 2025</h3>
+      <p><strong>“Art in motion, Gaming in action”</strong></p>
+      <p>UnivArTech is a premier artistic and technological competition designed to inspire creativity and innovation among students from across Morocco. It is an annual event that serves as a hub for emerging digital talents to showcase their skills in gaming, digital art, and multimedia production.</p>
+      <p>In the 2025 edition, we spotlight <strong>GAMING</strong>—a thriving creative medium that blends storytelling, design, and cutting-edge technology to deliver immersive experiences. From video game concepts to digital animations, we invite participants to reimagine what’s possible in the world of gaming and beyond.</p>
+    </div>
+  </section>
+<!-- Features Section -->
+ <section id =about>
+    <h2 class="section-title">What You’ll Find at UnivArTech:</h2>
+ </section>
+<section class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="fas fa-film"></i>
+          <h4>Short Films & Documentaries</h4>
+          <p>Showcase your storytelling skills through engaging short films and documentaries.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="fas fa-paint-brush"></i>
+          <h4>Digital Art</h4>
+          <p>Create and exhibit stunning visuals, from photography to NFTs.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="fas fa-gamepad"></i>
+          <h4>Gaming</h4>
+          <p>Bring your interactive gaming concepts to life in our competition.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <div class="feature-box">
+          <i class="fas fa-film"></i>
+          <h4>Animation</h4>
+          <p>Unleash your creativity with animated shorts and experiences.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature-box">
+          <i class="fas fa-headphones"></i>
+          <h4>Audio (Music & Podcasts)</h4>
+          <p>Express yourself through music compositions or engaging podcasts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Call for Submissions Section -->
+<section id="call-for-submissions">
+  <h2 class="section-title">Call for Submissions</h2>
+  <div class="content-box">
+    <p>We are seeking entries for short films, digital art, and gaming projects that challenge the norms and celebrate creativity. Categories include:</p>
+    <ul>
+      <li>Short Films: Showcase your storytelling prowess.</li>
+      <li>Digital Art: Submit your best visual creations, from photography to NFTs.</li>
+      <li>Gaming: Innovate and design the next interactive experience.</li>
+    </ul>
+    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScBHikQi79eCqMwRbaQERp4sfNVRBUac8Ma3euDzF2M7GuK2Q/closedform">Submit your work here!</a></p>
+  </div>
+</section>
+
+<!-- Organization Section -->
+<section id="organization">
+  <h2 class="section-title">Organization</h2>
+  <div class="content-box">
+    <p>UnivARTech 2025 is organized by Creative Minds, an interdisciplinary team committed to merging art, technology, and innovation. We aim to foster creativity, collaboration, and global impact.</p>
+  </div>
+</section>
+
+<!-- Venue Section -->
+<section id="venue">
+  <h2 class="section-title">Venue</h2>
+  <div class="content-box">
+    <p>The event will take place at the iconic TechArt Convention Center, located in Kenitra, Morocco. Find below options to reach the venue:</p>
+    <h3>Location</h3>
+    <p>Kenitra, Morocco</p>
+    <div class="map-container">
+       
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3298.0978508380485!2d-6.587448025948576!3d34.246046707474974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda759f000000001%3A0xb0f2670fb7c990f7!2sUniversit%C3%A9%20Ibn%20Tofail_K%C3%A9nitra!5e0!3m2!1sfr!2sma!4v1737144191942!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+    <h3>How to get to the campus:</h3>
+    <ul>
+      <li><strong>By Car:</strong> Use Google Maps or any GPS navigation tool to get directions to Cumpus.</li>
+      <li><strong>By Taxi:</strong> You can take a taxi directly to the event venue.</li>
+      <li><strong>By Bus:</strong> The nearest bus stop is located at [].</li>
+      <li><strong>From the Train Station:</strong> The venue is 10 minutes away by taxi from Kenitra train station.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2 class="section-title">Contact & Info</h2>
+  <div class="content-box">
+    <p>Have questions or need more details? Reach out to us at:</p>
+    <p>
+      <a href="mailto:univartech@uit.ac.ma" class="social-link">
+        <i class="fas fa-envelope"></i> univartech@uit.ac.ma
+      </a>
+    </p>
+    <div>
+    <a href="https://www.instagram.com/univ_artech/" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="tel:+212" class="social-link"><i class="fab fa-phone"></i> 06</a>
+
+      <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+     
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 UnivARTech. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
